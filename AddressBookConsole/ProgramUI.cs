@@ -38,15 +38,15 @@ public class ProgramUI
             switch (input)
             {
                 case "1":
-                CreateContact();
+                AddContactToList();
                 break;
 
                 case "2":
-                ViewAllContacts();
+                GetContactList();
                 break;
 
                 case "3":
-                SearchContactByName();
+                GetContactByName();
                 break;
 
                 case "4":
@@ -75,7 +75,7 @@ public class ProgramUI
 
     // Create a contact
 
-    private void CreateContact()
+    private void AddContactToList()
     {
         System.Console.Clear();
         AddressBook.Repository.AddressBook newContact = CreateNewContactObject();
@@ -84,7 +84,7 @@ public class ProgramUI
 
     // View all contacts
 
-    private void ViewAllContacts()
+    private void GetContactList()
     {
         System.Console.Clear();
         
@@ -100,7 +100,7 @@ public class ProgramUI
 
     // View contact by name
 
-    private void SearchContactByName()
+    private void GetContactByName()
     {
         System.Console.Clear();
 
@@ -125,7 +125,7 @@ public class ProgramUI
 
     private void UpdateContactList()
     {
-        ViewAllContacts();
+        GetContactList();
 
         System.Console.WriteLine("Enter the ID of the contact you wish to update:");
 
@@ -175,7 +175,7 @@ public class ProgramUI
     {
         System.Console.Clear();
 
-        ViewAllContacts();
+        GetContactList();
 
         System.Console.WriteLine("Enter the ID of the contact you wish to delete.");
         int contactUniqueID = int.Parse(System.Console.ReadLine());
@@ -201,9 +201,5 @@ public class ProgramUI
         _contactRepo.AddContactToList(chandler);
         _contactRepo.AddContactToList(sergio);
     }
-
-
-
-
 
 }

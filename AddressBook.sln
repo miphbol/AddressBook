@@ -7,6 +7,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AddressBook.Repository", "A
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AddressBookConsole", "AddressBookConsole\AddressBookConsole.csproj", "{864C77B1-0E35-46F1-83C0-ACAD4B4FBB2F}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AddressBook.Test", "AddressBook.Test\AddressBook.Test.csproj", "{FA5F1FA9-0F85-4487-A698-802AE13156B3}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -24,5 +26,9 @@ Global
 		{864C77B1-0E35-46F1-83C0-ACAD4B4FBB2F}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{864C77B1-0E35-46F1-83C0-ACAD4B4FBB2F}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{864C77B1-0E35-46F1-83C0-ACAD4B4FBB2F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{FA5F1FA9-0F85-4487-A698-802AE13156B3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{FA5F1FA9-0F85-4487-A698-802AE13156B3}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{FA5F1FA9-0F85-4487-A698-802AE13156B3}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{FA5F1FA9-0F85-4487-A698-802AE13156B3}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 EndGlobal
