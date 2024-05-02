@@ -8,7 +8,7 @@ public class AddressBookRepo
 
     public void AddContactToList(AddressBook contact)
     {
-        _addressBookList.Add(contact)
+        _addressBookList.Add(contact);
     }
 
     // Read
@@ -45,15 +45,15 @@ public class AddressBookRepo
 
     public bool RemoveContact(int contactid)
     {
-        AddressBook entry = GetContactByID(contactid);
+        AddressBook contact = GetContactByID(contactid);
 
-        if (entry == null)
+        if (contact == null)
         {
             return false;
         }
 
         int initialCount = _addressBookList.Count;
-        _addressBookList.Remove(entry);
+        _addressBookList.Remove(contact);
 
         if (initialCount > _addressBookList.Count)
         {
@@ -71,11 +71,11 @@ public class AddressBookRepo
 
     public AddressBook GetContactByID(int contactid)
     {
-        foreach (AddressBook entry in _addressBookList)
+        foreach (AddressBook contact in _addressBookList)
         {
-            if (entry.ContactID == entryid)
+            if (contact.ContactID == contactid)
             {
-                return entry;
+                return contact;
             }
         }
 
@@ -84,11 +84,11 @@ public class AddressBookRepo
 
     public AddressBook GetContactByName(string contactname)
     {
-        foreach (AddressBook entry in _addressBookList)
+        foreach (AddressBook contact in _addressBookList)
         {
-            if (entry.ContactName.ToLower() == entryname.ToLower())
+            if (contact.ContactName.ToLower() == contactname.ToLower())
             {
-                return entry;
+                return contact;
             }
         }
 
