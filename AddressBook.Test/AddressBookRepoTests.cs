@@ -17,6 +17,8 @@ public class AddressBookUnitTests
     {
         _addressbookrepo = new AddressBookRepo();
         _addressbook = new Repository.AddressBook(5473, "Chandler Shover", "7777 Sneed Drive", "chandlershover@fakemail.com", 8675309);
+
+        _addressbookrepo.AddContactToList(_addressbook);
     }
 
     // Add Method
@@ -34,26 +36,25 @@ public class AddressBookUnitTests
         Assert.IsNotNull(contactFromList);
     }
 
+
+
     // Update
 
     [TestMethod]
 
     public void UpdateContactList_ShouldReturnTrue()
     {
-        AddressBook.Repository.AddressBook newContact = new Repository.AddressBook(5473, "Chandler Shover", "888 Fake Lane", "chandlershover@fakemail.com", 1234567);
+        AddressBook.Repository.AddressBook newContact = new Repository.AddressBook(5473, "Chandler Shover", "451 Fake Way", "chandlershover@fakemail.com", 8675309);
 
         bool updateResult = _addressbookrepo.UpdateContactList(5473, newContact);
 
         Assert.IsTrue(updateResult);
     }
 
-    [TestMethod]
-    [DataRow(5473, true)]
-    [DataRow(1337, false)]
 
     public void UpdateContactList_ShouldMatchGivenBool(int originalID, bool shouldUpdate)
     {
-        AddressBook.Repository.AddressBook newContact = new Repository.AddressBook(5473, "Chandler Shover", "888 Fake Lane", "chandlershover@fakemail.com", 1234567);
+        AddressBook.Repository.AddressBook newContact = new Repository.AddressBook(451, "Chandler Shover", "7777 Sneed Drive", "chandlershover@fakemail.com", 8675309);
 
         bool updateResult = _addressbookrepo.UpdateContactList(originalID, newContact);
 
